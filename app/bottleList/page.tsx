@@ -3,9 +3,11 @@ import Bottle from "@/models/bottleModel";
 
 export default async function BottleList() {
   await connectDB();
-  const bottles = await Bottle.find().limit(10);
+
+  const bottles = await Bottle.find().skip(10).limit(20);
+
   return (
-    <div className="flex flex-col center">
+    <div className="flex flex-col items-center h-screen">
       <h2>Bottle List</h2>
       <ul>
         {bottles &&
