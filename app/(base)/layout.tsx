@@ -1,4 +1,4 @@
-import Link from "next/link";
+import AppHeader from "@/components/appHeader";
 
 export default function RootLayout({
   children,
@@ -7,11 +7,8 @@ export default function RootLayout({
 }) {
   return (
     <div className="min-h-screen">
-      <header className="flex gap-3 justify-center">
-        <Link href="/">Home</Link>
-        <Link href="/bottleList">Bottle List</Link>
-      </header>
-      <main className="relative flex flex-col items-center justify-between p-24">
+      <AppHeader />
+      <main className="relative flex flex-col items-center justify-between p-8">
         {children}
       </main>
     </div>
