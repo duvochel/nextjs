@@ -15,7 +15,7 @@ export default function AppHeader() {
           <Link className={`link ${pathname === '/' ? 'active' : ''} hover:text-zinc-500`} href="/">
             Home
           </Link>
-          <Link className="hover:text-zinc-500" href="/bottleList/1">
+          <Link className="hover:text-zinc-500" href="/bottleList?page=1">
             My Bottles
           </Link>
           <Link className="hover:text-zinc-500" href="#">

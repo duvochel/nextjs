@@ -1,10 +1,10 @@
 import { notFound } from "next/navigation";
 
 import { getBottles } from "@/lib/bottles";
-import PaginationButton from "../components/paginationButton";
+import PaginationButton from "./components/paginationButton";
 
-export default async function Page({ params }: { params: { page: string } }) {
-  const currentPage = parseInt(params.page);
+export default async function Page({ searchParams }: { searchParams: { page: string } }) {
+  const currentPage = parseInt(searchParams.page);
   const data = await getBottles({ page: currentPage });
   if (!data.bottles) {
     notFound();

@@ -14,12 +14,12 @@ export default function PaginationButton({
   const router = useRouter();
 
   const handleNext = () => {
-    router.push(`/bottleList/${page + 1}`);
+    router.push(`/bottleList?page=${page + 1}`);
   };
 
   const handlePrevious = () => {
     if (page > 1) {
-      router.push(`/bottleList/${page - 1}`);
+      router.push(`/bottleList?page=${page - 1}`);
     }
   };
 
