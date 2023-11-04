@@ -6,6 +6,9 @@ export interface IBottle {
   color: string;
   quantity: string;
   price: string;
+  vintage: string;
+  region: string;
+  image: string;
 }
 
 const bottleShema = new mongoose.Schema<IBottle>({
@@ -18,6 +21,9 @@ const bottleShema = new mongoose.Schema<IBottle>({
   color: String,
   quantity: String,
   price: String,
+  vintage: String,
+  region: String,
+  image: String,
 });
 
 const Bottle = mongoose.model("Bottle", bottleShema);

@@ -44,7 +44,7 @@ export default function InfiniteBottles({
     };
 
     if (isVisible) {
-      updateBottles();
+      updateBottles().catch();
     }
 
     // eslint-disable-next-line react-hooks/exhaustive-deps

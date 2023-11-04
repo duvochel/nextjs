@@ -10,6 +10,7 @@ export interface IBottleResponse {
   bottles?: IBottle[];
   totalPages?: number;
   results?: number;
+  totalBottles?: number;
   error?: any;
 }
 
@@ -36,10 +37,13 @@ export async function getBottles(filter: BottleFilter = {}) {
       color: entity.color,
       quantity: entity.quantity,
       price: entity.price,
+      vintage: entity.vintage,
+      region: entity.region,
+      image: entity.image,
     }));
     const results = bottles?.length;
 
-    return { bottles, totalPages, results };
+    return { bottles, totalPages, results, totalBottles };
   } catch (error) {
     return { error };
   }
