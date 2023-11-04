@@ -7,19 +7,29 @@ export default function AppHeader() {
   const pathname = usePathname();
   return (
     <header className="w-full p-4 flex items-center justify-between">
-      <nav aria-label="Main Navigation" className="w-full h-16 shadow-md flex items-center px-4 md:px-6">
+      <nav
+        aria-label="Main Navigation"
+        className="w-full h-16 shadow-md flex items-center px-4 md:px-6"
+      >
         <div className="flex items-center">
-          <h1 className="ml-6 text-2xl font-bold tracking-tighter">WineCellar</h1>
+          <h1 className="ml-6 text-2xl font-bold tracking-tighter">
+            WineCellar
+          </h1>
         </div>
         <div className="ml-auto space-x-8 hidden md:flex">
-          <Link className={`link ${pathname === '/' ? 'active' : ''} hover:text-zinc-500`} href="/">
+          <Link
+            className={`link ${
+              pathname === "/" ? "active" : ""
+            } hover:text-zinc-500`}
+            href="/"
+          >
             Home
           </Link>
           <Link className="hover:text-zinc-500" href="/bottleList?page=1">
-            My Bottles
+            Bottles List
           </Link>
-          <Link className="hover:text-zinc-500" href="#">
-            Testimonials
+          <Link className="hover:text-zinc-500" href="/bottleScroll">
+            Bottles Scroll
           </Link>
         </div>
       </nav>
