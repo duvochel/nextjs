@@ -56,7 +56,11 @@ export default function InfiniteBottles({
         <BottleCard key={index} bottle={bottle} number={index} />
       ))}
       <div ref={endOfBottlesRef}></div>
-      {isLoading && <Spinner />}
+      {isLoading && (
+        <div className="absolute bottom-0">
+          <Spinner />
+        </div>
+      )}
     </>
   );
 }
