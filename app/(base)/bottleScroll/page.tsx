@@ -22,13 +22,11 @@ export default async function BottleScroll() {
           {data.totalBottles} bottles in stock
         </span>
       </div>
-      <div className="flex flex-wrap gap-2 justify-center">
-        <InfiniteBottles
-          initialBottles={data.bottles ? data.bottles : []}
-          fetchNextPage={fetchNextPage}
-          totalPages={data.totalPages}
-        />
-      </div>
+      <InfiniteBottles
+        initialBottles={data.bottles ? data.bottles : []}
+        fetchNextPage={fetchNextPage}
+        totalPages={data.totalPages}
+      />
     </>
   );
 }

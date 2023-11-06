@@ -51,16 +51,18 @@ export default function InfiniteBottles({
   }, [isVisible]);
 
   return (
-    <>
-      {bottles.map((bottle, index) => (
-        <BottleCard key={index} bottle={bottle} number={index} />
-      ))}
-      <div ref={endOfBottlesRef}></div>
+    <div className="flex flex-col">
+      <div className="flex flex-wrap gap-2 justify-center">
+        {bottles.map((bottle, index) => (
+          <BottleCard key={index} bottle={bottle} number={index} />
+        ))}
+        <div ref={endOfBottlesRef}></div>
+      </div>
       {isLoading && (
-        <div className="absolute bottom-0">
+        <div className="flex justify-center align-center mt-2">
           <Spinner />
         </div>
       )}
-    </>
+    </div>
   );
 }
