@@ -1,5 +1,5 @@
-import Bottle, { IBottle } from "../models/bottleModel";
-import connectDB from "./connect-db";
+"use server";
+import Bottle, { IBottle } from "../models/bottle";
 
 interface BottleFilter {
   page?: number;

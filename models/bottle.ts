@@ -26,6 +26,4 @@ const bottleShema = new mongoose.Schema<IBottle>({
   image: String,
 });
 
-const Bottle = mongoose.model("Bottle", bottleShema);
-
-export default Bottle;
+export default mongoose.models.Bottle || mongoose.model("Bottle", bottleShema);

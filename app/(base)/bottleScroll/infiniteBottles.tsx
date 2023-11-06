@@ -1,7 +1,7 @@
 "use client";
 import { useEffect, useRef, useState } from "react";
 
-import { IBottle } from "@/models/bottleModel";
+import { IBottle } from "@/models/bottle";
 import Spinner from "@/components/spinner";
 import { useIntersectionObserver } from "@/hooks/useIntersectionObserver";
 import { IBottleResponse } from "@/lib/bottles";

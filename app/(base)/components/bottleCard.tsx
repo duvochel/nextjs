@@ -1,5 +1,5 @@
 import Button from "@/components/button";
-import { IBottle } from "@/models/bottleModel";
+import { IBottle } from "@/models/bottle";
 import Image from "next/image";
 
 interface BottleCardProps {
