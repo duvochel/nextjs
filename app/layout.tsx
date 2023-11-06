@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 
-import connectDB from "@/lib/connect-db";
 import { Inter } from "next/font/google";
 
 import "./globals.css";
@@ -11,11 +10,6 @@ export const metadata: Metadata = {
   title: "Wine Cellar",
   description: "NextJs app for managing your bottles",
 };
-
-connectDB().catch((e) => {
-  console.error(e);
-  process.exit(1);
-});
 
 export default async function RootLayout({
   children,

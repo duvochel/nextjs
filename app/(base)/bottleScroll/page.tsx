@@ -18,7 +18,9 @@ export default async function BottleScroll() {
   return (
     <>
       <div>
-        <span className="text-lg my-2">{data.totalBottles} bottles in stock</span>
+        <span className="text-lg my-2">
+          {data.totalBottles} bottles in stock
+        </span>
       </div>
       <div className="flex flex-wrap gap-2 justify-center">
         <InfiniteBottles

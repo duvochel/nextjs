@@ -1,5 +1,6 @@
 "use server";
 import Bottle, { IBottle } from "../models/bottle";
+import connectDB from "./connect-db";
 
 interface BottleFilter {
   page?: number;
@@ -16,6 +17,7 @@ export interface IBottleResponse {
 
 export async function getBottles(filter: BottleFilter = {}) {
   try {
+    await connectDB();
     const page = filter.page ?? 1;
     const limit = filter.limit ?? 10;
     const skip = (page - 1) * limit;

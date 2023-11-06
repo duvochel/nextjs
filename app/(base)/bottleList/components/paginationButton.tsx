@@ -31,7 +31,9 @@ export default function PaginationButton({
       <p className="text-gray-800 dark:text-gray-200">
         Page {page} of {total}
       </p>
-      <Button onClick={handleNext} disabled={page === total}>Next</Button>
+      <Button onClick={handleNext} disabled={page === total}>
+        Next
+      </Button>
     </div>
   );
 }
